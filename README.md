@@ -41,5 +41,16 @@ Telegram → Backend-сервис → Bitrix24
 ## Статус проекта
 Проект реализован в виде MVP и готов к практическому использованию.
 
+## Скриншоты 
+
+<img width="1204" height="1988" alt="Снимок экрана 2025-11-18 161501" src="https://github.com/user-attachments/assets/ea882665-be17-4c0f-be32-4f6299a12ace" />
+<img width="1454" height="1974" alt="Снимок экрана 2025-11-18 161627" src="https://github.com/user-attachments/assets/305babf0-dc5b-4bb9-a5e4-39e7740f21b5" />
+<img width="1354" height="1976" alt="Снимок экрана 2025-11-18 162012" src="https://github.com/user-attachments/assets/16a6ffb4-951d-46db-a724-a2f8e62ae304" />
+<img width="1394" height="1962" alt="Снимок экрана 2025-11-18 162120" src="https://github.com/user-attachments/assets/e3219c9c-c579-447c-956a-b5e1e4b96c2b" />
+<img width="1172" height="1884" alt="Снимок экрана 2025-11-18 162146" src="https://github.com/user-attachments/assets/b536a0f4-ef88-4b53-ad29-ca3f2c994f4f" />
+<img width="1174" height="1934" alt="Снимок экрана 2025-11-18 171648" src="https://github.com/user-attachments/assets/0cd43c0e-edd1-4c5a-96b1-c54d3fe77a5a" />
+<img width="1912" height="2012" alt="Снимок экрана 2025-11-18 183126" src="https://github.com/user-attachments/assets/e829574c-2d6d-4874-a80f-1c1e819544c2" />
+<img width="1644" height="1828" alt="Снимок экрана 2026-01-12 180832" src="https://github.com/user-attachments/assets/c99d14d1-fa59-46c4-90c6-2e9e88490f4c" />
+
 ## Автор
 Екатерина Сметанина
