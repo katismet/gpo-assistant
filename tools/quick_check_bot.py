@@ -5,7 +5,11 @@ from aiogram import Bot
 from aiogram.types import BotCommand
 
 async def check_bot():
-    token = "BOT_TOKEN_REMOVED"
+    import os
+    token = os.getenv("BOT_TOKEN")
+    if not token:
+        print("❌ BOT_TOKEN не найден в переменных окружения")
+        return
     bot = Bot(token=token)
     
     try:

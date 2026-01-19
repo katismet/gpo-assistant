@@ -77,6 +77,9 @@ staff_map.json
 *.bak
 *.backup
 
+# Windows shortcuts
+*.lnk
+
 
 
 
