@@ -1,0 +1,71 @@
+{
+  "equip_sample": {
+    "shift_id": 98765,
+    "type": "EQUIP",
+    "equip_type": "Экскаватор JCB",
+    "hours": 6,
+    "rate_type": "HOUR",
+    "rate": 3500
+  },
+  "mat_sample": {
+    "shift_id": 98765,
+    "type": "MAT",
+    "mat_type": "Щебень 20–40",
+    "qty": 18,
+    "unit": "т",
+    "price": 1200
+  },
+  "bitrix_payloads": {
+    "equipment": {
+      "entityTypeId": "${ENTITY_RESOURCE}",
+      "fields": {
+        "UF_SHIFT_ID": 98765,
+        "UF_RESOURCE_TYPE": "EQUIP",
+        "UF_EQUIP_TYPE": "Экскаватор JCB",
+        "UF_EQUIP_HOURS": 6,
+        "UF_EQUIP_RATE_TYPE": "HOUR",
+        "UF_EQUIP_RATE": 3500
+      }
+    },
+    "material": {
+      "entityTypeId": "${ENTITY_RESOURCE}",
+      "fields": {
+        "UF_SHIFT_ID": 98765,
+        "UF_RESOURCE_TYPE": "MAT",
+        "UF_MAT_TYPE": "Щебень 20–40",
+        "UF_MAT_QTY": 18,
+        "UF_MAT_UNIT": "т",
+        "UF_MAT_PRICE": 1200
+      }
+    }
+  },
+  "validation_tests": {
+    "valid_equipment": {
+      "resource_type": "EQUIP",
+      "equip_type": "Погрузчик",
+      "equip_hours": "6.5",
+      "equip_rate_type": "SHIFT",
+      "equip_rate": "15000"
+    },
+    "valid_material": {
+      "resource_type": "MAT",
+      "mat_type": "Песок",
+      "mat_qty": "25",
+      "mat_unit": "м³",
+      "mat_price": "800"
+    },
+    "invalid_equipment_missing_type": {
+      "resource_type": "EQUIP",
+      "equip_hours": "8",
+      "equip_rate_type": "HOUR",
+      "equip_rate": "2000"
+    },
+    "invalid_material_negative_qty": {
+      "resource_type": "MAT",
+      "mat_type": "Цемент",
+      "mat_qty": "-5",
+      "mat_unit": "т",
+      "mat_price": "3000"
+    }
+  }
+}

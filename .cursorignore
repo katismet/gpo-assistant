@@ -1,0 +1,44 @@
+# Virtual environments
+venv_clean/
+.venv/
+venv/
+ENV/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+*.log
+logs/
+bot.log*
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Output files
+output/
+
+# Large documentation files (optional - uncomment if too many)
+# *.md
+# !README.md
+
+# Bitrix generated files
+bitrix_field_map.json
+bitrix_uf_fields.json
+bitrix_integration_test.json
+debug_fields_*.json
+
+# Subscriptions
+w6_subscriptions.json
+
+
+
+
+
+

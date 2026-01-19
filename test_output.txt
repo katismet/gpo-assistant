@@ -1,0 +1,31 @@
+﻿python : C:\├╧╬ ╧юью∙эшъ\venv_clean\Lib\site-packages\docxcompose\properties.py:18: UserWarning: pkg_resources is deprecated as an
+ API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 202
+5-11-30. Refrain from using this package or pin to Setuptools<81.
+строка:1 знак:1
++ python scripts/generate_lpa_direct.py 297 2>&1 | Out-File -FilePath t ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\├╧╬ ╧юью∙эшъ... Setuptools<81.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  import pkg_resources
+Traceback (most recent call last):
+  File "C:\├╧╬ ╧юью∙эшъ\scripts\generate_lpa_direct.py", line 116, in <module>
+    asyncio.run(main())
+  File "C:\Users\╩рЄхЁшэр\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\╩рЄхЁшэр\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\╩рЄхЁшэр\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\├╧╬ ╧юью∙эшъ\scripts\generate_lpa_direct.py", line 101, in main
+    result = await generate_lpa_for_shift(shift_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\├╧╬ ╧юью∙эшъ\scripts\generate_lpa_direct.py", line 16, in generate_lpa_for_shift
+    print(f"\U0001f4c4 ├хэхЁрЎш  ╦╧└ фы  ёьхэ√ {shift_bitrix_id}...")
+  File "C:\Users\╩рЄхЁшэр\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1251.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4c4' in position 0: character maps to <undefined>

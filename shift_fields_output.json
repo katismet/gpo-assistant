@@ -1,0 +1,428 @@
+{
+  "id": {
+    "type": "integer",
+    "isRequired": false,
+    "isReadOnly": true,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": false,
+    "title": "ID",
+    "upperName": "ID"
+  },
+  "title": {
+    "type": "string",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": false,
+    "title": "Название",
+    "upperName": "TITLE"
+  },
+  "xmlId": {
+    "type": "string",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": false,
+    "title": "Внешний код",
+    "upperName": "XML_ID"
+  },
+  "createdTime": {
+    "type": "datetime",
+    "isRequired": false,
+    "isReadOnly": true,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": false,
+    "title": "Когда создан",
+    "upperName": "CREATED_TIME"
+  },
+  "updatedTime": {
+    "type": "datetime",
+    "isRequired": false,
+    "isReadOnly": true,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": false,
+    "title": "Когда обновлён",
+    "upperName": "UPDATED_TIME"
+  },
+  "createdBy": {
+    "type": "user",
+    "isRequired": false,
+    "isReadOnly": true,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": false,
+    "title": "Кем создан",
+    "upperName": "CREATED_BY"
+  },
+  "updatedBy": {
+    "type": "user",
+    "isRequired": false,
+    "isReadOnly": true,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": false,
+    "title": "Кем обновлён",
+    "upperName": "UPDATED_BY"
+  },
+  "assignedById": {
+    "type": "user",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": false,
+    "title": "Ответственный",
+    "upperName": "ASSIGNED_BY_ID"
+  },
+  "opened": {
+    "type": "boolean",
+    "isRequired": true,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": false,
+    "title": "Доступно для всех",
+    "upperName": "OPENED"
+  },
+  "webformId": {
+    "type": "integer",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": false,
+    "title": "Создано CRM-формой",
+    "upperName": "WEBFORM_ID"
+  },
+  "lastCommunicationTime": {
+    "type": "string",
+    "isRequired": false,
+    "isReadOnly": true,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": false,
+    "title": "Дата последней коммуникации",
+    "upperName": "LAST_COMMUNICATION_TIME"
+  },
+  "categoryId": {
+    "type": "crm_category",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": false,
+    "title": "Воронка",
+    "upperName": "CATEGORY_ID"
+  },
+  "lastActivityBy": {
+    "type": "user",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": false,
+    "title": "Автор последней активности в таймлайне",
+    "upperName": "LAST_ACTIVITY_BY"
+  },
+  "lastActivityTime": {
+    "type": "datetime",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": false,
+    "title": "Последняя активность",
+    "upperName": "LAST_ACTIVITY_TIME"
+  },
+  "lastCommunicationCallTime": {
+    "type": "datetime",
+    "isRequired": false,
+    "isReadOnly": true,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": false,
+    "title": "Дата последнего звонка",
+    "upperName": "LAST_COMMUNICATION_CALL_TIME"
+  },
+  "lastCommunicationEmailTime": {
+    "type": "datetime",
+    "isRequired": false,
+    "isReadOnly": true,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": false,
+    "title": "Дата последнего e-mail",
+    "upperName": "LAST_COMMUNICATION_EMAIL_TIME"
+  },
+  "lastCommunicationImolTime": {
+    "type": "datetime",
+    "isRequired": false,
+    "isReadOnly": true,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": false,
+    "title": "Дата последнего диалога в открытой линии",
+    "upperName": "LAST_COMMUNICATION_IMOL_TIME"
+  },
+  "lastCommunicationWebformTime": {
+    "type": "datetime",
+    "isRequired": false,
+    "isReadOnly": true,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": false,
+    "title": "Дата последнего заполнения CRM-формы",
+    "upperName": "LAST_COMMUNICATION_WEBFORM_TIME"
+  },
+  "ufCrm7UfCrmDate": {
+    "type": "datetime",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": true,
+    "title": "Дата",
+    "listLabel": "",
+    "formLabel": "Дата",
+    "filterLabel": "",
+    "settings": {
+      "DEFAULT_VALUE": {
+        "TYPE": "NONE",
+        "VALUE": ""
+      },
+      "USE_SECOND": "Y",
+      "USE_TIMEZONE": "N"
+    },
+    "upperName": "UF_CRM_7_UF_CRM_DATE"
+  },
+  "ufCrm7UfCrmShiftType": {
+    "type": "enumeration",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": true,
+    "items": [],
+    "title": "Тип Смены",
+    "listLabel": "",
+    "formLabel": "Тип Смены",
+    "filterLabel": "",
+    "settings": {
+      "DISPLAY": "LIST",
+      "LIST_HEIGHT": 1,
+      "CAPTION_NO_VALUE": "",
+      "SHOW_NO_VALUE": "Y"
+    },
+    "upperName": "UF_CRM_7_UF_CRM_SHIFT_TYPE"
+  },
+  "ufCrm7UfCrmObject": {
+    "type": "crm",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": true,
+    "title": "Объект",
+    "listLabel": "",
+    "formLabel": "Объект",
+    "filterLabel": "",
+    "settings": {
+      "LEAD": "Y",
+      "DEAL": "Y"
+    },
+    "upperName": "UF_CRM_7_UF_CRM_OBJECT"
+  },
+  "ufCrm7UfCrmPlanTotal": {
+    "type": "double",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": true,
+    "title": "Плановый объем ",
+    "listLabel": "",
+    "formLabel": "Плановый объем ",
+    "filterLabel": "",
+    "settings": {
+      "PRECISION": 0,
+      "SIZE": 20,
+      "MIN_VALUE": 0,
+      "MAX_VALUE": 0,
+      "DEFAULT_VALUE": null
+    },
+    "upperName": "UF_CRM_7_UF_CRM_PLAN_TOTAL"
+  },
+  "ufCrm7UfCrmFactTotal": {
+    "type": "double",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": true,
+    "title": "Фактический объём",
+    "listLabel": "",
+    "formLabel": "Фактический объём",
+    "filterLabel": "",
+    "settings": {
+      "PRECISION": 0,
+      "SIZE": 20,
+      "MIN_VALUE": 0,
+      "MAX_VALUE": 0,
+      "DEFAULT_VALUE": null
+    },
+    "upperName": "UF_CRM_7_UF_CRM_FACT_TOTAL"
+  },
+  "ufCrm7UfCrmEffRaw": {
+    "type": "double",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": true,
+    "title": "Коэффициент эффективности",
+    "listLabel": "",
+    "formLabel": "Коэффициент эффективности",
+    "filterLabel": "",
+    "settings": {
+      "PRECISION": 0,
+      "SIZE": 20,
+      "MIN_VALUE": 0,
+      "MAX_VALUE": 0,
+      "DEFAULT_VALUE": null
+    },
+    "upperName": "UF_CRM_7_UF_CRM_EFF_RAW"
+  },
+  "ufCrm7UfCrmEffFinal": {
+    "type": "double",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": true,
+    "title": "Итоговая эффективность",
+    "listLabel": "",
+    "formLabel": "Итоговая эффективность",
+    "filterLabel": "",
+    "settings": {
+      "PRECISION": 0,
+      "SIZE": 20,
+      "MIN_VALUE": 0,
+      "MAX_VALUE": 0,
+      "DEFAULT_VALUE": null
+    },
+    "upperName": "UF_CRM_7_UF_CRM_EFF_FINAL"
+  },
+  "ufCrm7UfCrmStatus": {
+    "type": "enumeration",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": true,
+    "items": [],
+    "title": "Статус",
+    "listLabel": "",
+    "formLabel": "Статус",
+    "filterLabel": "",
+    "settings": {
+      "DISPLAY": "LIST",
+      "LIST_HEIGHT": 1,
+      "CAPTION_NO_VALUE": "",
+      "SHOW_NO_VALUE": "Y"
+    },
+    "upperName": "UF_CRM_7_UF_CRM_STATUS"
+  },
+  "ufCrm7UfCrmPdfFile": {
+    "type": "file",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": false,
+    "isDynamic": true,
+    "title": "Файл PDF",
+    "listLabel": "",
+    "formLabel": "Файл PDF",
+    "filterLabel": "",
+    "settings": {
+      "SIZE": 20,
+      "LIST_WIDTH": 0,
+      "LIST_HEIGHT": 0,
+      "MAX_SHOW_SIZE": 0,
+      "MAX_ALLOWED_SIZE": 0,
+      "EXTENSIONS": [],
+      "TARGET_BLANK": "Y",
+      "DEFAULT_VIEW": null
+    },
+    "upperName": "UF_CRM_7_UF_CRM_PDF_FILE"
+  },
+  "ufCrm7UfPlanJson": {
+    "type": "string",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": true,
+    "isDynamic": true,
+    "title": "План работ (JSON)",
+    "listLabel": "",
+    "formLabel": "План работ (JSON)",
+    "filterLabel": "",
+    "settings": {
+      "SIZE": 20,
+      "ROWS": 1,
+      "REGEXP": "",
+      "MIN_LENGTH": 0,
+      "MAX_LENGTH": 0,
+      "DEFAULT_VALUE": ""
+    },
+    "upperName": "UF_CRM_7_UF_PLAN_JSON"
+  },
+  "ufCrm7UfFactJson": {
+    "type": "string",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": true,
+    "isDynamic": true,
+    "title": "Факт работ (JSON)",
+    "listLabel": "",
+    "formLabel": "Факт работ (JSON)",
+    "filterLabel": "",
+    "settings": {
+      "SIZE": 20,
+      "ROWS": 1,
+      "REGEXP": "",
+      "MIN_LENGTH": 0,
+      "MAX_LENGTH": 0,
+      "DEFAULT_VALUE": ""
+    },
+    "upperName": "UF_CRM_7_UF_FACT_JSON"
+  },
+  "ufCrm7UfShiftPhotos": {
+    "type": "file",
+    "isRequired": false,
+    "isReadOnly": false,
+    "isImmutable": false,
+    "isMultiple": true,
+    "isDynamic": true,
+    "title": "Фото смены",
+    "listLabel": "",
+    "formLabel": "Фото смены",
+    "filterLabel": "",
+    "settings": {
+      "SIZE": 20,
+      "LIST_WIDTH": 0,
+      "LIST_HEIGHT": 0,
+      "MAX_SHOW_SIZE": 0,
+      "MAX_ALLOWED_SIZE": 0,
+      "EXTENSIONS": [],
+      "TARGET_BLANK": "Y",
+      "DEFAULT_VIEW": null
+    },
+    "upperName": "UF_CRM_7_UF_SHIFT_PHOTOS"
+  }
+}

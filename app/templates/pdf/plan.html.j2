@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #2c3e50;
+        }
+        .header .date {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .section h2 {
+            font-size: 18px;
+            color: #34495e;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .info-item {
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .info-value {
+            margin-top: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #34495e;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        .works-table th:nth-child(1) { width: 40%; }
+        .works-table th:nth-child(2) { width: 15%; }
+        .works-table th:nth-child(3) { width: 15%; }
+        .works-table th:nth-child(4) { width: 30%; }
+        .resources-table th:nth-child(1) { width: 30%; }
+        .resources-table th:nth-child(2) { width: 20%; }
+        .resources-table th:nth-child(3) { width: 20%; }
+        .resources-table th:nth-child(4) { width: 15%; }
+        .resources-table th:nth-child(5) { width: 15%; }
+        .signatures {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .signature-block {
+            text-align: center;
+        }
+        .signature-line {
+            border-bottom: 1px solid #333;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: #7f8c8d;
+            border-top: 1px solid #bdc3c7;
+            padding-top: 20px;
+        }
+        .notes {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .notes h3 {
+            margin-top: 0;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>{{ title }}</h1>
+        <div class="date">Дата: {{ date }} | Время: {{ time }}</div>
+    </div>
+
+    <div class="section">
+        <h2>Информация о смене</h2>
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-label">Объект:</div>
+                <div class="info-value">{{ plan_data.object_name or 'Не указан' }}</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Тип смены:</div>
+                <div class="info-value">{{ plan_data.shift_type or 'Не указан' }}</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Дата смены:</div>
+                <div class="info-value">{{ plan_data.shift_date or 'Не указана' }}</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Время работы:</div>
+                <div class="info-value">{{ plan_data.shift_time or 'Не указано' }}</div>
+            </div>
+        </div>
+    </div>
+
+    {% if plan_data.works %}
+    <div class="section">
+        <h2>Планируемые работы</h2>
+        <table class="works-table">
+            <thead>
+                <tr>
+                    <th>Наименование работ</th>
+                    <th>Объём</th>
+                    <th>Единица</th>
+                    <th>Примечания</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for work in plan_data.works %}
+                <tr>
+                    <td>{{ work.name }}</td>
+                    <td>{{ work.volume }}</td>
+                    <td>{{ work.unit }}</td>
+                    <td>{{ work.notes or '-' }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endif %}
+
+    {% if plan_data.resources %}
+    <div class="section">
+        <h2>Планируемые ресурсы</h2>
+        
+        {% if plan_data.resources.technique %}
+        <h3>Техника</h3>
+        <table class="resources-table">
+            <thead>
+                <tr>
+                    <th>Наименование</th>
+                    <th>Количество</th>
+                    <th>Единица</th>
+                    <th>Тариф</th>
+                    <th>Стоимость</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in plan_data.resources.technique %}
+                <tr>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.qty }}</td>
+                    <td>{{ item.unit }}</td>
+                    <td>{{ item.tariff or '-' }}</td>
+                    <td>{{ item.cost or '-' }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+
+        {% if plan_data.resources.materials %}
+        <h3>Материалы</h3>
+        <table class="resources-table">
+            <thead>
+                <tr>
+                    <th>Наименование</th>
+                    <th>Количество</th>
+                    <th>Единица</th>
+                    <th>Цена</th>
+                    <th>Стоимость</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in plan_data.resources.materials %}
+                <tr>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.qty }}</td>
+                    <td>{{ item.unit }}</td>
+                    <td>{{ item.price or '-' }}</td>
+                    <td>{{ item.cost or '-' }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+
+        {% if plan_data.resources.timesheet %}
+        <h3>Табель</h3>
+        <table class="resources-table">
+            <thead>
+                <tr>
+                    <th>Бригада</th>
+                    <th>Часы</th>
+                    <th>Ставка</th>
+                    <th>Стоимость</th>
+                    <th>Примечания</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in plan_data.resources.timesheet %}
+                <tr>
+                    <td>{{ item.crew }}</td>
+                    <td>{{ item.hours }}</td>
+                    <td>{{ item.rate }}</td>
+                    <td>{{ item.total_cost or '-' }}</td>
+                    <td>{{ item.notes or '-' }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    {% if plan_data.notes %}
+    <div class="section">
+        <div class="notes">
+            <h3>Примечания</h3>
+            <p>{{ plan_data.notes }}</p>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="signatures">
+        <div class="signature-block">
+            <div class="signature-line"></div>
+            <div>Прораб</div>
+        </div>
+        <div class="signature-block">
+            <div class="signature-line"></div>
+            <div>Владелец</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Документ сгенерирован автоматически {{ generated_at }}</p>
+        <p>ГПО-Помощник v0.1.0</p>
+    </div>
+</body>
+</html>

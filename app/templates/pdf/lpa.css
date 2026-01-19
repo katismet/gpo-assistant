@@ -1,0 +1,212 @@
+/* Стили для PDF документов ЛПА */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+.header .date {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    font-size: 18px;
+    color: #34495e;
+    border-bottom: 1px solid #bdc3c7;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.section h3 {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.info-value {
+    margin-top: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #bdc3c7;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #34495e;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Специфичные таблицы */
+.works-table th:nth-child(1) { width: 40%; }
+.works-table th:nth-child(2) { width: 15%; }
+.works-table th:nth-child(3) { width: 15%; }
+.works-table th:nth-child(4) { width: 30%; }
+
+.resources-table th:nth-child(1) { width: 30%; }
+.resources-table th:nth-child(2) { width: 20%; }
+.resources-table th:nth-child(3) { width: 20%; }
+.resources-table th:nth-child(4) { width: 15%; }
+.resources-table th:nth-child(5) { width: 15%; }
+
+.plan-fact-table th:nth-child(1) { width: 40%; }
+.plan-fact-table th:nth-child(2) { width: 20%; }
+.plan-fact-table th:nth-child(3) { width: 20%; }
+.plan-fact-table th:nth-child(4) { width: 20%; }
+
+.incidents-table th:nth-child(1) { width: 20%; }
+.incidents-table th:nth-child(2) { width: 80%; }
+
+.downtime-table th:nth-child(1) { width: 20%; }
+.downtime-table th:nth-child(2) { width: 80%; }
+
+.efficiency-table th:nth-child(1) { width: 40%; }
+.efficiency-table th:nth-child(2) { width: 30%; }
+.efficiency-table th:nth-child(3) { width: 30%; }
+
+.signatures {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.signature-block {
+    text-align: center;
+}
+
+.signature-line {
+    border-bottom: 1px solid #333;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 12px;
+    color: #7f8c8d;
+    border-top: 1px solid #bdc3c7;
+    padding-top: 20px;
+}
+
+.notes {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.notes h3 {
+    margin-top: 0;
+    color: #856404;
+}
+
+/* Цветовые индикаторы эффективности */
+.efficiency-good {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.efficiency-warning {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.efficiency-bad {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Элементы инцидентов и простоев */
+.incident-item {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.downtime-item {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Адаптивность для печати */
+@media print {
+    body {
+        margin: 0;
+        font-size: 12px;
+    }
+    
+    .header {
+        page-break-after: avoid;
+    }
+    
+    .section {
+        page-break-inside: avoid;
+    }
+    
+    table {
+        page-break-inside: avoid;
+    }
+    
+    .signatures {
+        page-break-before: avoid;
+    }
+}

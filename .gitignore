@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+venv_clean/
+.venv/
+ENV/
+env/
+.ENV
+.env
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+bot.log*
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+gpo_assistant.db
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Project specific
+output/
+*.docx
+*.pdf
+!app/templates/**/*.docx
+!app/templates/**/*.pdf
+
+# Bitrix field maps (generated)
+bitrix_field_map.json
+bitrix_uf_fields.json
+bitrix_integration_test.json
+debug_fields_*.json
+shift_fields_dump.json
+
+# Subscriptions
+w6_subscriptions.json
+
+# Staff map
+staff_map.json
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+
+
+
+
+
+
